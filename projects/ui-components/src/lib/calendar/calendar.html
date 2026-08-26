@@ -1,0 +1,23 @@
+<div class="date-field">
+
+    <label>{{ label }}</label>
+
+    <div class="input-wrapper">
+
+        <input
+            #dateInput
+            type="date"
+            [value]="value"
+            (click)="openCalendar()">
+
+        <button
+            type="button"
+            (click)="openCalendar()">
+
+            📅
+
+        </button>
+
+    </div>
+
+</div>

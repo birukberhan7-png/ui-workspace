@@ -1,0 +1,360 @@
+/* =========================================
+   HOST
+   ========================================= */
+
+:host {
+
+  /* =======================================
+     BALINA UI DESIGN TOKENS
+     ======================================= */
+
+  --textbox-width: 300px;
+
+  --textbox-height: 44px;
+
+  --textbox-background: #ffffff;
+
+  --textbox-border:
+    1px solid #a9a9a9;
+
+  --textbox-border-hover:
+    #777777;
+
+  --textbox-border-focus:
+    #68479b;
+
+  --textbox-radius:
+    6px;
+
+  --textbox-text-color:
+    #222222;
+
+  --textbox-placeholder-color:
+    #777777;
+
+  --textbox-font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  --textbox-font-size:
+    14px;
+
+  --textbox-font-weight:
+    600;
+
+  --textbox-padding:
+    0 18px;
+
+  --textbox-focus-shadow:
+    0 0 0 1px
+    rgba(104, 71, 155, 0.15);
+
+  --textbox-disabled-background:
+    #f5f5f5;
+
+  --textbox-disabled-color:
+    #999999;
+
+  --textbox-disabled-border:
+    #d0d0d0;
+
+  --textbox-icon-color:
+    #777777;
+
+  --textbox-icon-hover-color:
+    #333333;
+
+
+  /* =======================================
+     HOST SIZE
+     ======================================= */
+
+  display: block;
+
+  width:
+    var(--textbox-width);
+
+  height:
+    var(--textbox-height);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   CONTAINER
+   ========================================= */
+
+.text-box-container {
+
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   INPUT WRAPPER
+   ========================================= */
+
+.text-box-input-wrapper {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   INPUT
+   ========================================= */
+
+.text-box-input {
+
+  width: 100%;
+
+  height: 100%;
+
+  box-sizing: border-box;
+
+  padding:
+    var(--textbox-padding);
+
+  border:
+    var(--textbox-border);
+
+  border-radius:
+    var(--textbox-radius);
+
+  outline: none;
+
+  background:
+    var(--textbox-background);
+
+  color:
+    var(--textbox-text-color);
+
+  font-family:
+    var(--textbox-font-family);
+
+  font-size:
+    var(--textbox-font-size);
+
+  font-weight:
+    var(--textbox-font-weight);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+
+  cursor: text;
+}
+
+
+/* =========================================
+   PASSWORD INPUT
+   ========================================= */
+
+.text-box-input[type="password"] {
+
+  padding-right: 48px;
+}
+
+
+/* =========================================
+   PLACEHOLDER
+   ========================================= */
+
+.text-box-input::placeholder {
+
+  color:
+    var(--textbox-placeholder-color);
+
+  opacity: 1;
+
+  font-family:
+    var(--textbox-font-family);
+
+  font-size:
+    var(--textbox-font-size);
+
+  font-weight:
+    var(--textbox-font-weight);
+}
+
+
+/* =========================================
+   HOVER
+   ========================================= */
+
+.text-box-input:hover:not(:disabled) {
+
+  border-color:
+    var(--textbox-border-hover);
+}
+
+
+/* =========================================
+   FOCUS
+   ========================================= */
+
+.text-box-input:focus {
+
+  border-color:
+    var(--textbox-border-focus);
+
+  box-shadow:
+    var(--textbox-focus-shadow);
+}
+
+
+/* =========================================
+   DISABLED
+   ========================================= */
+
+.text-box-input:disabled {
+
+  background:
+    var(--textbox-disabled-background);
+
+  color:
+    var(--textbox-disabled-color);
+
+  border-color:
+    var(--textbox-disabled-border);
+
+  cursor:
+    not-allowed;
+}
+
+
+/* =========================================
+   READONLY
+   ========================================= */
+
+.text-box-input:read-only {
+
+  cursor:
+    default;
+}
+
+
+/* =========================================
+   PASSWORD BUTTON
+   ========================================= */
+
+.text-box-password-button {
+
+  position: absolute;
+
+  right: 8px;
+
+  top: 50%;
+
+  transform:
+    translateY(-50%);
+
+  width: 32px;
+
+  height: 32px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color:
+    var(--textbox-icon-color);
+
+  cursor: pointer;
+
+  border-radius: 4px;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+
+/* =========================================
+   PASSWORD BUTTON HOVER
+   ========================================= */
+
+.text-box-password-button:hover:not(:disabled) {
+
+  color:
+    var(--textbox-icon-hover-color);
+
+  background:
+    rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================
+   PASSWORD BUTTON DISABLED
+   ========================================= */
+
+.text-box-password-button:disabled {
+
+  cursor:
+    not-allowed;
+
+  opacity:
+    0.5;
+}
+
+
+/* =========================================
+   PASSWORD ICON
+   ========================================= */
+
+.text-box-password-icon {
+
+  width: 19px;
+
+  height: 19px;
+
+  display: block;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  :host {
+
+    width: 100%;
+  }
+
+  .text-box-input {
+
+    font-size:
+      var(--textbox-font-size);
+  }
+}
